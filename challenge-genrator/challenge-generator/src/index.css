@@ -280,6 +280,7 @@ main {
   display: inline-block;
   font-size: 0.85rem;
   margin-left: 0.25rem;
+  transition: transform  0.3s ease-out ; /* to add animation look: 1.property 2.time (how much time will it take to transist) 3.to make it look smoother at ease. */
 }
 
 .challenge-item-details.expanded .challenge-item-details-icon {
