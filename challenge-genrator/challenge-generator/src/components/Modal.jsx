@@ -5,7 +5,8 @@ export default function Modal({ title, children, onClose }) {
   return createPortal(
     <>
       <div className="backdrop" onClick={onClose} />
-      <motion.dialog 
+      <motion.dialog
+      whileHover={{scale: 1.1}}
       initial={{opacity: 0, y: 30}} //It is use to set animation without any props or condition.
       animate={{ opacity: 1, y:0}} 
       exit={{opacity:0, y:30}} // It is used to set disappearance animation.
