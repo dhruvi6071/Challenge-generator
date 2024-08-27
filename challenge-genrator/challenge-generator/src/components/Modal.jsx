@@ -6,11 +6,14 @@ export default function Modal({ title, children, onClose }) {
     <>
       <div className="backdrop" onClick={onClose} />
       <motion.dialog
-      whileHover={{scale: 1.1}}
-      initial={{opacity: 0, y: 30}} //It is use to set animation without any props or condition.
-      animate={{ opacity: 1, y:0}} 
-      exit={{opacity:0, y:30}} // It is used to set disappearance animation.
-      open className="modal">
+      varients= {{
+        hidden: {opacity:0, y: 30},
+        visible: {opacity: 1, y:0}
+      }}
+      initial="hidden" //It is use to set animation without any props or condition.
+      animate="visible" 
+      exit="hidden" // It is used to set disappearance animation.
+     open className="modal">
         <h2>{title}</h2>
         {children}
       </motion.dialog>
